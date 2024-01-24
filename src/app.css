@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:global(*) {
+	font-family: 'SF Pro Display', sans-serif;
+}
+
+body {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.francisco {
+	font-family: 'SF Pro Display', sans-serif;
+}
