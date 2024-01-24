@@ -2,7 +2,7 @@
 	import mock_cards from '$lib/mocks/cards';
 	import type { Card } from '$lib/mocks/cards';
 
-	export let cards: Card[] | undefined = undefined;
+	// export let cards: Card[] | undefined = undefined;
 </script>
 
 <div class="flex flex-col w-full py-10 sm:pl-24 sm:pr-14 lg:pr-36">

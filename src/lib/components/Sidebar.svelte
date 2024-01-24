@@ -10,8 +10,8 @@
 		ref: string;
 	};
 
-	export let articoli: Articolo[] | undefined = undefined,
-		link: Link[] | undefined = undefined;
+	// export let articoli: Articolo[] | undefined = undefined,
+	// 	link: Link[] | undefined = undefined;
 
 	let mock_link: Link[] = [
 		{ title: 'About', ref: '/about' },
