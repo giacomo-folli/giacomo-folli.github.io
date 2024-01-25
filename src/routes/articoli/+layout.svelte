@@ -25,6 +25,6 @@
 	</div>
 </header>
 
-<div class="w-full h-96 bg-slate-600"></div>
-
-<div class="px-32"><slot /></div>
+<div class="px-28 py-1">
+	<slot />
+</div>
