@@ -1,7 +1,7 @@
 <script lang="ts">
 	type Articolo = {
 		emoji?: string;
-		name: string;
+		name?: string;
 		ref: string;
 	};
 
@@ -10,19 +10,12 @@
 		ref: string;
 	};
 
-	// export let articoli: Articolo[] | undefined = undefined,
-	// 	link: Link[] | undefined = undefined;
+	export let articoli: Articolo[] = [];
 
-	let mock_link: Link[] = [
+	let links: Link[] = [
 		{ title: 'About', ref: '/about' },
 		{ title: 'Experiences', ref: '/expos' },
 		{ title: 'Reading List', ref: '/readings' }
-	];
-
-	let mock_articoli: Articolo[] = [
-		{ emoji: '👨‍💻', name: 'Everything I learned in 10 years of blogging', ref: 'articoli/1' },
-		{ emoji: '👨‍🍳', name: 'From idea to 100k uniques per week in two months', ref: 'articoli/2' },
-		{ emoji: '💰', name: 'Principles of Bitcoin Maximalism', ref: 'articoli/3' }
 	];
 </script>
 
@@ -33,13 +26,13 @@
 		<h2 class="popular">Popular</h2>
 		<div class="flex-grow">
 			<div class="w-full py-5">
-				{#each mock_articoli as mock}
+				{#each articoli as articolo, index}
 					<div
 						class="text-lg tracking-wide font-normal underline decoration-2 leading-7 underline-offset-4"
 					>
-						<a class="francisco" href={mock.ref}>
-							{mock.emoji}
-							{mock.name}
+						<a class="francisco" href={articolo.ref}>
+							{articolo.emoji || '❤️‍🔥'}
+							{articolo.name ||`--------------> Post ${index + 1}`}
 						</a>
 					</div>
 				{/each}
@@ -50,7 +43,7 @@
 	<!-- link in fondo -->
 	<div class="mt-4">
 		<ul class=" text-lg underline decoration-2 underline-offset-4">
-			{#each mock_link as link, index}
+			{#each links as link, index}
 				<li>
 					<a href={link.ref}>{link.title}</a>
 				</li>
