@@ -1,1 +1,3 @@
-articolo page
+<script lang="ts">
+	export let data;
+</script>
