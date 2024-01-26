@@ -9,7 +9,7 @@
 
 	let picked: Articolo[] = [
 		{ ref: 'articoli/1', name: 'Everything I learned in 10 years of blogging', emoji: '👨‍💻' },
-		{ ref: 'articoli/1', name: 'From idea to 100k uniques per week in two months', emoji: '👨‍🍳' },
+		{ ref: 'articoli/2', name: 'From idea to 100k uniques per week in two months', emoji: '👨‍🍳' },
 		{ ref: 'articoli/1', name: 'Principles of Bitcoin Maximalism', emoji: '💰' }
 	];
 </script>
