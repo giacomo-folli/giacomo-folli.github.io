@@ -13,7 +13,7 @@ const mock_cards: Card[] = [
 	{
 		title: 'The heartbeat of your startup',
 		intro: 'The only thing that matters is throughput. Becoming the most prolific version of yourself is the most important thing you can do to become proud of your work. Making a group of people become the most prolific version of themselves sounds like a reasonable way to build a great company. So that’s what we’re trying to do. Throughput is the speed of getting to some outputs. The faster you get, the more things you do, and the more you build momentum.',
-		ref: 'articoli/1'
+		ref: 'articoli/2'
 	},
 	{
 		title: 'Mutable or immutable user properties',
