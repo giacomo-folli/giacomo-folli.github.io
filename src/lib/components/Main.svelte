@@ -6,7 +6,7 @@
 	// export let cards: Card[] | undefined = undefined;
 </script>
 
-<div class="flex flex-col w-full py-10 sm:pl-24 sm:pr-14 lg:pr-36">
+<div class="flex flex-col-reverse w-full py-10 sm:pl-24 sm:pr-14 lg:pr-36">
 	{#each mock_cards as card}
 		<div class="mb-2 transition ease-in hover:scale-[1.01] duration-200 rounded-lg">
 			<button
