@@ -1,22 +1,25 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
+	import type { PageData } from './$types';
 
 	export let data: PageData;
+
 </script>
 
-<div class="cover-image">
-	<img src={data.image} alt="" />
-</div>
+	{#if !!data.article?.image}
+		<div class="cover-image">
+			<img class='w-full top-[-200px]' src={data.article.image} alt="header" />
+		</div>
+	{/if}
 
-<article class="">
-	<div class="mt-14 mb-4 font-bold text-md tracking-wider">POSTS</div>
+	<article>
+		<div class="xs:mt-14 mb-4 font-bold text-md tracking-wider">POSTS</div>
 
-	<h1 class="text-[60px] font-semibold">{data.title}</h1>
-	<p class="text-sm font-thin tracking-widest">{data.date}</p>
-	<div class="mt-16 max-w-[65vw] text-lg tracking-wide">
-		<svelte:component this={data.content} />
-	</div>
-</article>
+		<h1 class="text-[30px] sm:text-[60px] font-semibold">{data.article?.title}</h1>
+		<p class="text-sm font-thin tracking-widest">{data.article?.date}</p>
+		<div class="max-xs:mt-8 mt-16 sm:max-w-[80vw] md:max-w-[65vw] text-lg tracking-wide">
+			<svelte:component this={data.article?.content}/>
+		</div>
+	</article>
 
 <style>
 	.cover-image {
@@ -25,5 +28,9 @@
 
 		overflow: hidden;
 		/* object-fit: cover; */
+	}
+
+	li {
+		color: red;
 	}
 </style>

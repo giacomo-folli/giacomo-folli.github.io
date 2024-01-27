@@ -1,12 +1,8 @@
-export async function load({ params }) {
-	const post = await import(`../../posts/${params.slug}.md`);
-	const { title, date, image } = post.metadata;
-	const content = post.default;
+export async function load({ parent, params }) {
+	const parentData = await parent();
+	const article = parentData.posts.filter((ps) => ps.id === Number(params.slug))[0];
 
 	return {
-		content,
-		title,
-		date,
-		image
+		article
 	};
 }
