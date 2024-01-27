@@ -1,0 +1,18 @@
+---
+author: paco
+title: 
+date: ''
+description: 
+image:
+categories:
+  - 
+  - 
+published: false
+---
+
+<svelte:head>
+  <title>{title} | {author}</title>
+</svelte:head>
+
+<br>
+<strong></strong>

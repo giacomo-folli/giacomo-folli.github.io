@@ -7,16 +7,33 @@
 
 	export let data: PageData;
 
+	type Post = {
+    id: number
+    title: string 
+    date: string
+    image?: string
+    content: unknown
+    intro: string
+  }
+
+	let posts: Post[] = data.posts
+
 	let picked: Articolo[] = [
 		{ ref: 'articoli/1', name: 'primo post', emoji: '👨‍💻' },
 		{ ref: 'articoli/2', name: 'fuoco, percorsi e leggerezza', emoji: '👨‍🍳' },
+		{ ref: 'articoli/3', name: 'xp e propositi', emoji: '👨‍🍳' }
 	];
+
 </script>
 
-<div class="px-8 py-7">
+<div>
 	<Header />
 	<div class="flex flex-col sm:flex-row">
 		<Sidebar articoli={picked} />
-		<Main />
+		<Main {posts} />
 	</div>
 </div>
+
+<svelte:head>
+	<title>Home | paco</title>
+</svelte:head>

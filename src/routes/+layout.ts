@@ -1,14 +1,24 @@
 export const prerender = true
 
-// export async function load({ params }) {
-// 	const post: Articolo[] = await import(`./posts/*.md`);
-// 	const { title, date, image } = post.metadata;
-// 	const content = post.default;
+export async function load() {
+	const i = 8;
+	const posts: {
+		id: number;
+		title: string;
+		date: string;
+		image?: string;
+		image_css?: string;
+		content: ConstructorOfATypedSvelteComponent;
+		intro: string;
+	}[] = [];
 
-// 	return {
-// 		content,
-// 		title,
-// 		date,
-// 		image
-// 	};
-// }
+	for (let j = 1; j <= i; j++) {
+		const post = await import(`./posts/${j}.md`);
+		const { id, title, date, image, image_css, intro } = post.metadata;
+		const content = post.default;
+
+		posts.push({ id, title, date, image, intro, image_css, content });
+	}
+
+	return { posts };
+}
