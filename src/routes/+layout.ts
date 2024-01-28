@@ -10,14 +10,16 @@ export async function load() {
 		image_css?: string;
 		content: ConstructorOfATypedSvelteComponent;
 		intro: string;
+		span?: string;
+		aside?: string;
 	}[] = [];
 
 	for (let j = 1; j <= i; j++) {
 		const post = await import(`./posts/${j}.md`);
-		const { id, title, date, image, image_css, intro } = post.metadata;
+		const { id, title, date, image, image_css, intro, span, aside } = post.metadata;
 		const content = post.default;
 
-		posts.push({ id, title, date, image, intro, image_css, content });
+		posts.push({ id, title, date, image, intro, image_css, content, span, aside });
 	}
 
 	return { posts };

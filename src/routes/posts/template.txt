@@ -1,18 +1,15 @@
 ---
-author: paco
-title: 
+title: ''
 date: ''
-description: 
-image:
-categories:
-  - 
-  - 
+image: 
+intro: ""
+id: number
+span: 'large' | 'normal' | null
+aside:
+author: paco
 published: false
 ---
 
 <svelte:head>
   <title>{title} | {author}</title>
 </svelte:head>
-
-<br>
-<strong></strong>
