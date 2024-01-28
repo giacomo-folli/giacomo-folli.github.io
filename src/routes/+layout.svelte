@@ -1,9 +1,13 @@
 <script>
 	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import '../app.css';
 </script>
 
-<div class="px-4 py-4 xs:px-8 xs:py-7 ">
+<div class="bg-slate-100 p-2 xs:p-4">
+	<div class="pb-[60px]">
+		<Header />
+	</div>
 	<slot />
 	<Footer />
 </div>
