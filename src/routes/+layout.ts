@@ -15,7 +15,7 @@ export async function load() {
 	}[] = [];
 
 	for (let j = 1; j <= i; j++) {
-		const post = await import(`./posts/${j}.md`);
+		const post = await import(`$lib/posts/${j}.md`);
 		const { id, title, date, image, image_css, intro, span, aside } = post.metadata;
 		const content = post.default;
 

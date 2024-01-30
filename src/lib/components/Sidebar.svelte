@@ -14,21 +14,21 @@
 
 	let links: Link[] = [
 		{ title: 'About', ref: '/about' },
-		{ title: 'Experiences', ref: '/expos' },
-		{ title: 'Reading List', ref: '/readings' }
+		{ title: 'Projects', ref: '/projects' },
+		{ title: 'Now', ref: '/now' }
 	];
 </script>
 
-<div class="w-[27vw] sm:w-[37vw] sidebar pr-1 pt-12 flex flex-col">
+<div class="mr-4 px-4 pt-2 pb-4 bg-slate-400 dark:bg-slate-950 dark:bg-opacity-25 bg-opacity-65 backdrop-blur-sm rounded-lg shadow-lg dark:shadow-lg dark:shadow-neutral-950 sidebar flex flex-col justify-between">
 
 	<!-- articoli popolari -->
-	<div class="flex flex-col mt-1">
-		<h2 class="popular">Popular</h2>
+	<div class="flex flex-col">
+		<h2 class="dark:text-slate-200 popular mt-2">Popular</h2>
 		<div class="flex-grow">
-			<div class="w-full py-5">
+			<div class="mt-2">
 				{#each articoli as articolo, index}
 					<div
-						class="text-lg tracking-wide font-normal underline decoration-2 leading-7 underline-offset-4"
+						class="dark:text-slate-200 text-lg tracking-wide font-normal hover:underline decoration-2 leading-7 underline-offset-4"
 					>
 						<a class="francisco" href={articolo.ref}>
 							{articolo.emoji || '❤️‍🔥'}
@@ -41,16 +41,15 @@
 	</div>
 
 	<!-- link in fondo -->
-	<div class="mt-4">
-		<ul class=" text-lg underline decoration-2 underline-offset-4">
+	<div class="mt-2" >
+		<ul class="w-full justify-between flex text-md text-slate-900 decoration-2 underline-offset-4">
 			{#each links as link, index}
-				<li>
+				<li class="hover:underline dark:text-slate-200">
 					<a href={link.ref}>{link.title}</a>
 				</li>
 			{/each}
 		</ul>
 	</div>
-	
 </div>
 
 <style>
@@ -60,6 +59,10 @@
 		font-weight: 500;
 		line-height: 30px;
 	}
+
+	/* .sidebar {
+		height: calc(100);
+	} */
 
 	@media (max-width: 640px) {
     .sidebar {
